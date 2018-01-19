@@ -18,27 +18,40 @@
        margin: auto;
        box-shadow: 10px 10px 10px 10px #ffff7c;
        transition-timing-function:ease-in-out;
-       transition-delay:0.25s;
-     
-       
        }
+       
     h1:hover {
-        width: 1500px;
-        height: 90px;
-        
+        width: 1000px;
+        transform: skewX(10deg);
     }
     
        
     h3 {
        text-align: center;
-       font-family: verdana;
+       font-family: Verdana, sans-serif;
        background-color: #fff993;
        width: 400px;
        border: 30px solid #52aa00;
        padding: 50px;
        margin: auto;
+       position:relative;
        box-shadow: 10px 10px 10px 10px #ffff7c;
+       animation-name:billboard;
+       animation-duration:2s;
+       animation-delay:3s;
+       animation-iteration-count:2;
+       
     }
+    
+    @keyframes billboard {
+    0%  {transform: none;}
+    25% {transform: rotateX(90deg);}
+    50% {transform: rotateX(180deg);}
+    75% {transform: rotateX(270deg);}
+    100% {transform: none;}
+}
+
+
    
   </style>
   </head>
